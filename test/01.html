@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style type="text/css">
+	canvas {
+		border: 1px solid black;
+	}
+</style>
+<script type="text/javascript">
+module = {};
+module.exports = {};
+require = function() {};
+</script>
+<script type="text/javascript" src="../engine/core/gameengine.js"></script>
+<script type="text/javascript" src="../engine/core/vector.js"></script>
+<script type="text/javascript" src="../engine/core/object.js"></script>
+<script type="text/javascript" src="../engine/core/actor.js"></script>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function() {
+
+	var a = new Actor();
+
+	a.velocity = new Vector(100, 100);
+	a.collisionRadius = 40;
+	new GameEngine();
+	GameEngine.spawn(a);
+	GameEngine.begin();
+});
+</script>
+</head>
+<body>
+</body>
+</html>

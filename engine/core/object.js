@@ -1,8 +1,13 @@
-function xObject() {
+EngineObject = function() {
 
-}
+EngineObject.__isPrototypeDefined = EngineObject.__isPrototypeDefined || !!function() {
 
-xObject.prototype.getHumanReadableName = function() {
-	throw "Not implemented.";
-}
+	EngineObject.prototype.getHumanReadableName = function() {
+		throw "Not implemented.";
+	}
 
+}(); // end of __isPrototypeDefined
+
+} // end of EngineObject()
+
+module.exports = EngineObject;
